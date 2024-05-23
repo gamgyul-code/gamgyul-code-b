@@ -34,7 +34,8 @@ public class Translation {
     @Enumerated(EnumType.STRING)
     private EntityType entityType;
 
-    private String languageCode;
+    @Enumerated(EnumType.STRING)
+    private LanguageCode languageCode;
 
     private String fieldName;
 
