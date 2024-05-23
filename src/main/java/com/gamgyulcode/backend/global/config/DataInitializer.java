@@ -13,6 +13,8 @@ import com.gamgyulcode.backend.module.theme.domain.ThemeRepository;
 import com.gamgyulcode.backend.module.translation.domain.LanguageCode;
 import com.gamgyulcode.backend.module.translation.domain.Translation;
 import com.gamgyulcode.backend.module.translation.domain.TranslationRepository;
+import java.util.Arrays;
+import java.util.List;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -173,24 +175,354 @@ public class DataInitializer {
             entitiesRepository.save(placeEntity);
             entitiesRepository.save(readingEntity);
 
-            Translation translation1 = Translation.builder()
-                    .entityType(EntityType.PLACE)
-                    .fieldName("placeName")
+
+
+            List<Translation> translations = Arrays.asList(
+                    Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("readingPlaceName")
                     .languageCode(LanguageCode.EN)
                     .text("Yeongsilgi Rock")
-                    .entityId(place1.getId())
-                    .build();
+                    .entityId(reading1.getId())
+                    .build(),
 
-            Translation translation2 = Translation.builder()
-                    .entityType(EntityType.PLACE)
-                    .fieldName("placeAddress")
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("time")
                     .languageCode(LanguageCode.EN)
-                    .text("1-4, Hawon-dong, Seogwipo-si, Jeju")
-                    .entityId(place1.getId())
-                    .build();
+                    .text("24/7")
+                    .entityId(reading1.getId())
+                    .build(),
 
-            translationRepository.save(translation1);
-            translationRepository.save(translation2);
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("tale")
+                    .languageCode(LanguageCode.EN)
+                    .text("The giant Seolmundae Halmang, who is said to have created Jeju, had five hundred sons. One day, while her sons were out gathering wood, Seolmundae Halmang was cooking a large pot of porridge for them. Unfortunately, she fell into the pot and drowned. When the sons returned home tired and hungry, they ate the porridge without knowing their mother was in it. The youngest son discovered bones at the bottom of the pot and realized what had happened. The 499 sons wept bitterly and turned into stones in the Yeongsil Valley. The youngest son, unable to stay with his brothers who had consumed their mother, ran away and became a stone at Chagwido, now known as the Last General's Stone.")
+                    .entityId(reading1.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("fee")
+                    .languageCode(LanguageCode.EN)
+                    .text("Free")
+                    .entityId(reading1.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("introText")
+                    .languageCode(LanguageCode.EN)
+                    .text("A brief introduction to Yeongsilgi Rock")
+                    .entityId(reading1.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("readingPlaceName")
+                    .languageCode(LanguageCode.EN)
+                    .text("Hallasan National Park")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("time")
+                    .languageCode(LanguageCode.EN)
+                    .text("24/7")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("tale")
+                    .languageCode(LanguageCode.EN)
+                    .text("Once upon a time, there was a giant named Seolmundae Halmang. She was incredibly strong and carried dirt in her skirt to form a large island in the middle of the vast blue sea. She formed mountains all over the island by piling dirt, and if a pile seemed too high, she would punch it to balance it. The mountains with depressions at the top are said to be formed this way. Eventually, she created a mountain high enough to touch the Milky Way, which is Hallasan.")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("terrain")
+                    .languageCode(LanguageCode.EN)
+                    .text("Hallasan, one of Korea's three major mountains along with Jirisan and Geumgangsan in North Korea, is located at the southernmost tip of the Korean Peninsula. It stands at 1,950 meters above sea level, making it the highest mountain in South Korea. A young volcanic island from the Quaternary period of the Cenozoic era, Hallasan last erupted about 25,000 years ago. It is surrounded by 360 parasitic cones, creating a unique landscape. The majestic appearance of Hallasan, rising in the center of the island, exudes a sense of grace and strength.")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("history")
+                    .languageCode(LanguageCode.EN)
+                    .text("Recognized as the greatest gift from the gods and a precious heritage to be preserved by the world, Jeju's Hallasan and its beautiful land were inscribed as Korea's first UNESCO World Natural Heritage site on June 27, 2007, and were designated as a Global Geopark on October 4, 2010.")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("caution")
+                    .languageCode(LanguageCode.EN)
+                    .text("※ To preserve the pristine condition of Hallasan, disposable lunch containers are prohibited (kimbap and hamburgers are allowed).")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("fee")
+                    .languageCode(LanguageCode.EN)
+                    .text("Free")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("introText")
+                    .languageCode(LanguageCode.EN)
+                    .text("Hallasan, one of Korea's three major mountains, is the highest mountain in South Korea. What is the legend of Hallasan created by Seolmundae Halmang?")
+                    .entityId(reading2.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("readingPlaceName")
+                    .languageCode(LanguageCode.EN)
+                    .text("Jeju Stone Park")
+                    .entityId(reading3.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("time")
+                    .languageCode(LanguageCode.EN)
+                    .text("Weekdays: 09:00 ~ 18:00, Weekends: 09:00 ~ 18:00")
+                    .entityId(reading3.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("tale")
+                    .languageCode(LanguageCode.EN)
+                    .text("Jeju Stone Park is a museum and ecological park that showcases the comprehensive stone culture of Jeju Island, the home of stones. The park is extensive, displaying all the stone statues of Jeju, and is themed around the island's creation myth of Seolmundae Halmang and her five hundred generals. It's an ideal place to explore and understand the myth while experiencing the serene mountain atmosphere of Jeju.")
+                    .entityId(reading3.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("fee")
+                    .languageCode(LanguageCode.EN)
+                    .text("Paid, Admission: Adults 5,000 KRW, Youth 3,500 KRW, Free for children, seniors, and people with disabilities")
+                    .entityId(reading3.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("introText")
+                    .languageCode(LanguageCode.EN)
+                    .text("Jeju Stone Park is themed around Seolmundae Halmang and her five hundred generals. It's an extensive park displaying all the stone statues of Jeju. This place could reveal many secrets about Seolmundae Halmang!")
+                    .entityId(reading3.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("readingPlaceName")
+                    .languageCode(LanguageCode.EN)
+                    .text("Gogeunsan")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("time")
+                    .languageCode(LanguageCode.EN)
+                    .text("24/7")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("tale")
+                    .languageCode(LanguageCode.EN)
+                    .text("Gogeunsan, also known as Gogongsan, is said to have earned its name because it stands alone in the middle of the plains, or because it's lonely without nearby mountains. Legend has it that when Seolmundae Halmang was bored, she would use Hallasan's summit as a pillow, sit on Gogeunsan's crater, and stretch her legs to play in the waters of the nearby Beomseom.")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("terrain")
+                    .languageCode(LanguageCode.EN)
+                    .text("Gogeunsan, located in the middle of Olle Trail 7-1, is a crater-topped oreum that surrounds the new city of Seogwipo. The midsection of the oreum is planted with cedar, cypress, and oak trees, offering refreshing air as you climb. From the crater, you can see the vast sea around Beomseom and the cityscape of Seogwipo.")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("caution")
+                    .languageCode(LanguageCode.EN)
+                    .text("Many oreums are registered as mountainous regions, making it hard to pinpoint their exact locations on navigation systems. Some have no dedicated parking, and some are private property with restricted access. It's advised to check accurate information with the Jeju Tourism Information Center (064-740-6000) before visiting.")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("fee")
+                    .languageCode(LanguageCode.EN)
+                    .text("Free")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("introText")
+                    .languageCode(LanguageCode.EN)
+                    .text("Gogeunsan, where Seolmundae Halmang is said to have laid down. You can enjoy a panoramic view of Beomseom from here.")
+                    .entityId(reading4.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("readingPlaceName")
+                    .languageCode(LanguageCode.EN)
+                    .text("Dangke Port")
+                    .entityId(reading5.getId())
+                    .build(),
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("readingPlaceName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Gogeunsan")
+                            .entityId(reading4.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("readingPlaceName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Jeju Stone Park")
+                            .entityId(reading3.getId())
+                            .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("time")
+                    .languageCode(LanguageCode.EN)
+                    .text("24/7")
+                    .entityId(reading5.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("tale")
+                    .languageCode(LanguageCode.EN)
+                    .text("Dangke means 'field with a shrine,' referring to the shrine for Seolmundae Halmang, the creator goddess of Jeju. The sea in front of Pyoseon was once very deep, and storms would often wreak havoc on the village. After villagers prayed for relief, the port was created overnight, according to the legend of Dangke Halmang. Close to the port, there is a shrine where divers often stop to perform rituals. The shrine is always open, allowing anyone to visit and offer prayers at any time.")
+                    .entityId(reading5.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("history")
+                    .languageCode(LanguageCode.EN)
+                    .text("Located at the starting point of Olle Trail 4, Dangke Port is part of Pyoseon Beach, which has the largest white sand beach area in Jeju. Since the Joseon Dynasty, the port has been a hub for fishing and trade, and a village formed around it during the Japanese occupation. From the beach at Dangke Port, you can see Pyoseon Beach and Dangke Village towards Seongsan Ilchulbong.")
+                    .entityId(reading5.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("fee")
+                    .languageCode(LanguageCode.EN)
+                    .text("Free")
+                    .entityId(reading5.getId())
+                    .build(),
+
+            Translation.builder()
+                    .entityType(EntityType.READING)
+                    .fieldName("introText")
+                    .languageCode(LanguageCode.EN)
+                    .text("A sunrise spot with a lighthouse, blending with the sea and occasional small boats. What hidden stories of Seolmundae Halmang can you discover here?")
+                    .entityId(reading5.getId())
+                    .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.PLACE)
+                            .fieldName("placeAddress")
+                            .languageCode(LanguageCode.EN)
+                            .text("1-4, Hawon-dong, Seogwipo-si, Jeju")
+                            .entityId(place1.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.PLACE)
+                            .fieldName("placeAddress")
+                            .languageCode(LanguageCode.EN)
+                            .text("2070-61, 1100-ro, Jeju-si, Jeju Special Self-Governing Province")
+                            .entityId(place2.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.PLACE)
+                            .fieldName("placeAddress")
+                            .languageCode(LanguageCode.EN)
+                            .text("2023, Namjo-ro, Jocheon-eup, Jeju-si, Jeju Special Self-Governing Province")
+                            .entityId(place3.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.PLACE)
+                            .fieldName("placeAddress")
+                            .languageCode(LanguageCode.EN)
+                            .text("48, Gogeunsan-ro 202beon-gil, Seogwipo-si, Jeju Special Self-Governing Province")
+                            .entityId(place4.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.PLACE)
+                            .fieldName("placeAddress")
+                            .languageCode(LanguageCode.EN)
+                            .text("1-3, Pyoseon-ri, Pyoseon-myeon, Seogwipo-si, Jeju Special Self-Governing Province")
+                            .entityId(place5.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("placeName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Yeongsilgi Rock")
+                            .entityId(place1.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("placeName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Hallasan National Park")
+                            .entityId(place2.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("placeName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Dangke Port")
+                            .entityId(place5.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("placeName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Gogeunsan")
+                            .entityId(place4.getId())
+                            .build(),
+
+                    Translation.builder()
+                            .entityType(EntityType.READING)
+                            .fieldName("placeName")
+                            .languageCode(LanguageCode.EN)
+                            .text("Jeju Stone Park")
+                            .entityId(place3.getId())
+                            .build()
+            );
+
+            translationRepository.saveAll(translations);
 
         };
     }

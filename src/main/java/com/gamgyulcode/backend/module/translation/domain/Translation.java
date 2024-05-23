@@ -39,6 +39,7 @@ public class Translation {
 
     private String fieldName;
 
+    @Column(columnDefinition = "TEXT")
     private String text;
 
     private Long entityId;
