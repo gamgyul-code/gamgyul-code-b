@@ -21,7 +21,7 @@ spec:
             - name: TZ
               value: Asia/Seoul
             - name: MARIADB_ROOT_PASSWORD
-              value: root
+              value: sa
             - name: MARIADB_DATABASE
               value: halmang
             - name: MARIADB_DISABLE_UPGRADE_BACKUP
