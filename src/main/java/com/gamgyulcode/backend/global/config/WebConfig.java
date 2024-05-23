@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+    /*
     @Autowired
     private LanguageInterceptor languageInterceptor;
 
@@ -16,6 +17,8 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(languageInterceptor);
     }
+
+     */
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
