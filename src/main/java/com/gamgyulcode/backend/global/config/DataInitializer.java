@@ -39,10 +39,39 @@ public class DataInitializer {
                     .theme(theme1)
                     .build();
 
+            Place place3 = Place.builder()
+                    .placeName("제주 돌문화공원")
+                    .placeAddress("제주특별자치도 제주시 조천읍 남조로 2023")
+                    .locationX("33.4373391").locationY("126.6668484")
+                    .theme(theme1)
+                    .build();
+
+            Place place4 = Place.builder()
+                    .placeName("고근산")
+                    .placeAddress("제주특별자치도 서귀포시 고근산로202번길 48")
+                    .locationX("33.2707366").locationY("126.5126032")
+                    .theme(theme1)
+                    .build();
+
+            Place place5 = Place.builder()
+                    .placeName("당케포구")
+                    .placeAddress("제주특별자치도 서귀포시 표선면 표선리 1-3")
+                    .locationX("33.3264171").locationY("126.8468674")
+                    .theme(theme1)
+                    .build();
+
+
+
             placeRepository.save(place1);
             placeRepository.save(place2);
+            placeRepository.save(place3);
+            placeRepository.save(place4);
+            placeRepository.save(place5);
             theme1.getPlaces().add(place1);
             theme1.getPlaces().add(place2);
+            theme1.getPlaces().add(place3);
+            theme1.getPlaces().add(place4);
+            theme1.getPlaces().add(place5);
             themeRepository.save(theme1);
 
             // 읽을거리 추가
@@ -74,11 +103,55 @@ public class DataInitializer {
                     .history("태고의 신비를 그대로 간직한 한라산과 아름다운 땅 제주는 신이 우리에게 선물한 최고의 보물이자 세계인이 함께 가꾸어야 할 소중한 유산으로 인정받아 2007년 6월 27일 제주 화산섬과 용암동굴이 우리나라 최초의 유네스코 세계자연유산으로 등재되었고, 2010년 10월 4일 세계지질공원으로 인증받았다.")
                     .caution("※ 청정 한라산 보전을 위해 일회용 도시락 반입 금지(김밥, 햄버거는 허용)")
                     .fee("무료")
-                    .introText("한라산은 최고야~ (수정필)")
+                    .introText("한반도의 3대 영산에 속하는 한라산은 남한에서 가장 높은 산이다. 설문대할망이 만들었다는 전설이 전해지는 한라산의 이야기는?")
+                    .build();
+
+            Reading reading3 = Reading.builder()
+                    .readingPlaceName("제주 돌문화공원")
+                    .placePictureUrl("https://api.cdn.visitjeju.net/photomng/imgpath/202111/01/c1fca31b-5bb2-453d-a818-b473ae2d0988.jpg")
+                    .phoneNumber("(+82) 064-710-7731~3")
+                    .time("평일 : 09:00 ~ 18:00 , 주말 : 09:00 ~ 18:00")
+                    .tale("제주돌문화공원은 돌의 고향인 제주도의 전신과 체계적인 돌 문화를 보여 주는 박물관이자 생태 공원이다.\n"
+                            + " 제주도의 모든 석상들을 다 전시해 놓았을 정도로 규모가 방대하며, 공원 전체가 제주도의 탄생 신화인 설문대할망과 오백장군을 테마로 조성되어 있어서, 고즈넉한 제주 산간의 분위기를 느끼는데 더할 나위 없는 장소다.\n"
+                            + "설문대할망의 설화를 따라간다면, 해당 설화를 이해하는 데 가장 최적의 장소이다.")
+                    .fee("유료,입장료 : 성인 5,000원, 청소년 3,500원, 어린이.경로인.장애인 무료")
+                    .introText("설문대할망과 오백장군을 테마로 조성된 공원. 제주도의 모든 석상을 전시해 놓을 정도로 방대한 규모이다. 이 곳에서 설문대할망의 비밀을 많이 파헤칠 수 있을지도?")
+                    .build();
+
+            Reading reading4 = Reading.builder()
+                    .readingPlaceName("고근산")
+                    .placePictureUrl("https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/4f77f379-2304-44d1-b319-8cd86241cd93.jpg")
+                    .phoneNumber("(+82) 064-760-2913")
+                    .time("연중무휴")
+                    .tale("고근산은 고공산이라고도 불리는데, 평지 한가운데가 우뚝 솟은 오름이라고 해서 붙여진 이름이라는 설과 근처에 산이 없어 외롭다는 데서 유래됐다는 설이 있다.\n"
+                            + "이 오름은 설문대할망이 심심할 때면 한라선 정상부를 베개 삼고 고근산 굼부리에는 궁둥이를 얹고 앞바다 범섬에 다리를 걸치고 누워서 물장구를 쳤다는 전설이 있다.")
+                    .terrain("제주올레 7-1코스 중간 지점에 위치한 고근산(孤根山)은 서귀포 신시가지를 감싸고 있는 오름으로 정상에 깊지 않은 분화구를 가지고 있다. \n"
+                            + "오름 중턱에는 삼나무, 편백나무, 상수리나무 등이 조림되어 있는데 나무들이 토해내는 상쾌한 공기를 마시며 오르다 보면 분화구에 도착한다. 이 곳에서 범섬 앞바다가 한눈에 펼쳐지고 서귀포시의 모습이 잘 드러난다.")
+                    .caution("오름은 주소가 산지로 되어있어, 내비게이션 검색시 정확한 위치를 알 수 없거나, 주차장이 따로 없는 곳이 많다.\n"
+                            + "또한 일부 오름은 사유지로, 출입이 제한되거나 통제되어있는 곳도 있다.\n"
+                            + "이에, 오름 방문시에는 사전에 제주관광정보센터(064-740-6000) 등을 통해 정확한 정보를 확인하고 방문하길 바란다.")
+                    .fee("무료")
+                    .introText("설문대할망이 누웠다고 전해지는 고근산. 아름다운 범섬을 한눈에 볼 수 있는 곳이다.")
+                    .build();
+
+            Reading reading5 = Reading.builder()
+                    .readingPlaceName("당케포구")
+                    .placePictureUrl("https://api.cdn.visitjeju.net/photomng/imgpath/202112/20/4b201f05-0d00-40b5-b1e3-d7f634cf17a4.JPG")
+                    .time("연중무휴")
+                    .tale("당케는 ‘당이 있는 케(경작지)’라는 의미인데 여기서 ‘당’은 ‘할망당’을 가리키며, 제주의 창조신인 ‘설문대할망’에게 넋을 기리는 곳이다. 예부터 표선 앞바다는 수심이 깊어 폭우가 몰아치면 파도가 마을을 쑥대밭으로 만들곤 하였다. "
+                            + "\n이에 고난을 겪던 마을 주민들이 신에게 소원을 빌자 하루 사이에 바다를 메운 포구가 만들어졌다는 전설이 전해져 오는데, 이를 ‘당케할망의전설’ 이라고 한다."
+                            + "\n포구와 가까이 위치한 할망당에는 위패가 모셔져 있는데 주로 해녀들이 오고 가며 신에게 제를 지내곤 한다. 할망당은 항상 열려 있으니 누구든지 언제라도 방문하여 제를 올릴 수 있다.")
+                    .history("올레 4코스 출발지점에 위치해 있는 당케포구는 제주에서 가장 넓은 면적의 백사장인 표선 해비치 해변에 있는 포구이다. "
+                            + "\n조선시대부터 어업과 무역이 이루어지면서 일제강점기 이후에는 포구에 마을이 형성되었으며, 당케포구의 백사장에서 성산일출봉 방향으로 바라보면 표선해변과 당케마을이 보인다.")
+                    .fee("무료")
+                    .introText("등대와 어우러진 바다 풍경과 간혹 드나드는 통통배가 멋진 풍광을 자아내는 해돋이 명소 이 곳에 숨겨진 설문대할망의 이야기는?")
                     .build();
 
             readingRepository.save(reading1);
             readingRepository.save(reading2);
+            readingRepository.save(reading3);
+            readingRepository.save(reading4);
+            readingRepository.save(reading5);
 
 
         };
