@@ -41,7 +41,5 @@ public class Translation {
 
     private String text;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "entity_id")
-    private Entities entity;
+    private Long entityId;
 }

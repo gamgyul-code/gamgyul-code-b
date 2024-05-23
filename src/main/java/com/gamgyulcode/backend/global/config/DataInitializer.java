@@ -1,5 +1,8 @@
 package com.gamgyulcode.backend.global.config;
 
+import com.gamgyulcode.backend.module.entity.domain.Entities;
+import com.gamgyulcode.backend.module.entity.domain.EntitiesRepository;
+import com.gamgyulcode.backend.module.entity.domain.EntityType;
 import com.gamgyulcode.backend.module.place.domain.Place;
 import com.gamgyulcode.backend.module.place.domain.PlaceRepository;
 import com.gamgyulcode.backend.module.reading.domain.Reading;
@@ -7,6 +10,9 @@ import com.gamgyulcode.backend.module.reading.domain.ReadingRepository;
 import com.gamgyulcode.backend.module.reading.dto.ReadingResponse;
 import com.gamgyulcode.backend.module.theme.domain.Theme;
 import com.gamgyulcode.backend.module.theme.domain.ThemeRepository;
+import com.gamgyulcode.backend.module.translation.domain.LanguageCode;
+import com.gamgyulcode.backend.module.translation.domain.Translation;
+import com.gamgyulcode.backend.module.translation.domain.TranslationRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +22,8 @@ public class DataInitializer {
 
     @Bean
     public CommandLineRunner loadData(ThemeRepository themeRepository, PlaceRepository placeRepository,
-                                      ReadingRepository readingRepository) {
+                                      ReadingRepository readingRepository, TranslationRepository translationRepository,
+                                      EntitiesRepository entitiesRepository) {
         return args -> {
             Theme theme1 = Theme.builder().themeName("설문대 할망").build();
             Theme theme2 = Theme.builder().themeName("역사").build();
@@ -153,6 +160,37 @@ public class DataInitializer {
             readingRepository.save(reading4);
             readingRepository.save(reading5);
 
+            Entities placeEntity = Entities.builder()
+                    .entityName("place")
+                    .entityType(EntityType.PLACE)
+                    .build();
+
+            Entities readingEntity = Entities.builder()
+                    .entityName("reading")
+                    .entityType(EntityType.READING)
+                    .build();
+
+            entitiesRepository.save(placeEntity);
+            entitiesRepository.save(readingEntity);
+
+            Translation translation1 = Translation.builder()
+                    .entityType(EntityType.PLACE)
+                    .fieldName("placeName")
+                    .languageCode(LanguageCode.EN)
+                    .text("Yeongsilgi Rock")
+                    .entityId(place1.getId())
+                    .build();
+
+            Translation translation2 = Translation.builder()
+                    .entityType(EntityType.PLACE)
+                    .fieldName("placeAddress")
+                    .languageCode(LanguageCode.EN)
+                    .text("1-4, Hawon-dong, Seogwipo-si, Jeju")
+                    .entityId(place1.getId())
+                    .build();
+
+            translationRepository.save(translation1);
+            translationRepository.save(translation2);
 
         };
     }
