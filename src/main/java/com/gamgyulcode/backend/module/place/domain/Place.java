@@ -20,9 +20,11 @@ public class Place {
 
     private String placeAddress;
 
-    private String placeCoordinate;
+    private String locationX;
+
+    private String locationY;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "theme_id")
+    @JoinColumn(name = "theme_id")@Enumerated(EnumType.STRING)
     private Theme theme;
 }
