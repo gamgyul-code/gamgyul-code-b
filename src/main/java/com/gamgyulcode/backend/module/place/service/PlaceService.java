@@ -1,19 +1,13 @@
 package com.gamgyulcode.backend.module.place.service;
 
 import com.gamgyulcode.backend.global.config.LanguageConfig;
-import com.gamgyulcode.backend.module.entity.domain.Entities;
 import com.gamgyulcode.backend.module.entity.domain.EntitiesRepository;
 import com.gamgyulcode.backend.module.place.domain.Place;
 import com.gamgyulcode.backend.module.place.domain.PlaceRepository;
 import com.gamgyulcode.backend.module.place.dto.PlaceResponse;
-import com.gamgyulcode.backend.module.reading.domain.Reading;
-import com.gamgyulcode.backend.module.reading.domain.ReadingRepository;
-import com.gamgyulcode.backend.module.theme.domain.Theme;
 import com.gamgyulcode.backend.module.translation.domain.LanguageCode;
-import com.gamgyulcode.backend.module.translation.domain.Translation;
 import com.gamgyulcode.backend.module.translation.domain.TranslationRepository;
 import java.util.List;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

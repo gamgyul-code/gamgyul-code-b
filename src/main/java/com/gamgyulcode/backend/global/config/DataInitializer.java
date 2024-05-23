@@ -7,7 +7,6 @@ import com.gamgyulcode.backend.module.place.domain.Place;
 import com.gamgyulcode.backend.module.place.domain.PlaceRepository;
 import com.gamgyulcode.backend.module.reading.domain.Reading;
 import com.gamgyulcode.backend.module.reading.domain.ReadingRepository;
-import com.gamgyulcode.backend.module.reading.dto.ReadingResponse;
 import com.gamgyulcode.backend.module.theme.domain.Theme;
 import com.gamgyulcode.backend.module.theme.domain.ThemeRepository;
 import com.gamgyulcode.backend.module.translation.domain.LanguageCode;

@@ -1,8 +1,6 @@
 package com.gamgyulcode.backend.module.place.dto;
 
-import com.gamgyulcode.backend.module.entity.domain.Entities;
 import com.gamgyulcode.backend.module.place.domain.Place;
-import com.gamgyulcode.backend.module.reading.domain.Reading;
 import com.gamgyulcode.backend.module.translation.domain.LanguageCode;
 import com.gamgyulcode.backend.module.translation.domain.Translation;
 import com.gamgyulcode.backend.module.translation.domain.TranslationRepository;

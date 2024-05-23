@@ -1,6 +1,5 @@
 package com.gamgyulcode.backend.module.theme.dto;
 
-import com.gamgyulcode.backend.module.theme.domain.Theme;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

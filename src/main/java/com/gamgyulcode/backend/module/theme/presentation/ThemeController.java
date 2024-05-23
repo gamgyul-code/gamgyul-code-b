@@ -2,7 +2,6 @@ package com.gamgyulcode.backend.module.theme.presentation;
 
 import com.gamgyulcode.backend.module.theme.dto.ThemeResponse;
 import com.gamgyulcode.backend.module.theme.service.ThemeService;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -3,7 +3,6 @@ package com.gamgyulcode.backend.module.theme.service;
 import com.gamgyulcode.backend.module.theme.domain.Theme;
 import com.gamgyulcode.backend.module.theme.domain.ThemeRepository;
 import com.gamgyulcode.backend.module.theme.dto.ThemeResponse;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;

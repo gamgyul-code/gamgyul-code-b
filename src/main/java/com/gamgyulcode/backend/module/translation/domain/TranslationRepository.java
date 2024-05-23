@@ -1,6 +1,5 @@
 package com.gamgyulcode.backend.module.translation.domain;
 
-import com.gamgyulcode.backend.module.entity.domain.Entities;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
