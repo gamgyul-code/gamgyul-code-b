@@ -24,6 +24,9 @@ public class Place {
 
     private String locationY;
 
+    @Enumerated(EnumType.STRING)
+    private Area area;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "theme_id")@Enumerated(EnumType.STRING)
     private Theme theme;
