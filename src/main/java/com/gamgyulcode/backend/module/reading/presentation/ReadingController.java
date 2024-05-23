@@ -21,6 +21,12 @@ public class ReadingController {
         return readingService.findFirst();
     }
 
+    @GetMapping("/{placeId}")
+    public ReadingResponse findFirstReading(@PathVariable Long placeId) {
+        return readingService.find(placeId);
+    }
+
+
     @GetMapping("/mapIntro/{placeId}")
     public ReadingResponse findMapIntro(@PathVariable Long placeId) {
         return readingService.findMapIntro(placeId);

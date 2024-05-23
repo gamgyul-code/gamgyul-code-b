@@ -27,6 +27,15 @@ public class ReadingService {
         return ReadingResponse.fromEntity(reading.get(), place);
     }
 
+    public ReadingResponse find(Long placeId) {
+        Place place = placeRepository.findById(placeId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 장소가 없습니다."));
+
+        Optional<Reading> reading = readingRepository.findById(placeId);
+
+        return ReadingResponse.fromEntity(reading.get(), place);
+    }
+
     public ReadingResponse findMapIntro(Long placeId) {
         Place place = placeRepository.findById(placeId)
             .orElseThrow(() -> new IllegalArgumentException("해당 장소가 없습니다."));
