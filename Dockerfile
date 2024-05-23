@@ -13,10 +13,13 @@ RUN echo "systemProp.http.proxyHost=krmp-proxy.9rum.cc\nsystemProp.http.proxyPor
 # gradlew를 이용한 프로젝트 필드
 RUN ./gradlew clean build
 
+# # 빌드된 JAR 파일을 복사
+# COPY --from=build /home/gradle/project/build/libs/*.jar /home/gradle/project/build/libs/kakao-1.0.jar
+
 # DATABASE_URL을 환경 변수로 삽입
 ENV SPRING_DATASOURCE_URL=jdbc:mariadb://mariadb:3306/halmang
 ENV SPRING_DATASOURCE_USERNAME=root
-ENV SPRING_DATASOURCE_PASSWORD=sa
-
-# 빌드 결과 jar 파일을 실행
-CMD ["java", "-jar", "-Dspring.profiles.active=prod", "/home/gradle/project/build/libs/kakao-1.0.jar"]
+ENV SPRING_DATASOURCE_PASSWORD=root
+ 
+# 빌드 결과 jar 파일을 실행cd b
+CMD ["java", "-jar", "-Dspring.profiles.active=prod", "/home/gradle/project/build/libs/backend-0.0.1-SNAPSHOT.jar"]
