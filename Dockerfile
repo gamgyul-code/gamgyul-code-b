@@ -14,7 +14,7 @@ RUN echo "systemProp.http.proxyHost=krmp-proxy.9rum.cc\nsystemProp.http.proxyPor
 RUN ./gradlew clean build
 
 # DATABASE_URL을 환경 변수로 삽입
-ENV DATABASE_URL=jdbc:mariadb://mariadb/halmang
+ENV DATABASE_URL=jdbc:mariadb://mariadb/krampoline
  
 # 빌드 결과 jar 파일을 실행cd b
 CMD ["java", "-jar", "-Dspring.profiles.active=dev", "/home/gradle/project/build/libs/backend-0.0.1-SNAPSHOT.jar"]

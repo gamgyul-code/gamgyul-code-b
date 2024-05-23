@@ -3,7 +3,7 @@ spring:
     name: server
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://mariadb:3306/halmang
+    url: jdbc:mariadb://mariadb:3306/krampoline
     username: root
     password: root
   profiles:
