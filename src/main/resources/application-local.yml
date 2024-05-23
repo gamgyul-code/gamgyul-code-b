@@ -5,7 +5,7 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://mariadb:3306/halmang
     username: root
-    password: sa
+    password: root
   config:
     name: local
 
