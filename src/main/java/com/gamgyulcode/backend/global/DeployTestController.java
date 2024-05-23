@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api")
+@RequestMapping
 public class DeployTestController {
 
     private final JdbcTemplate jdbcTemplate;
