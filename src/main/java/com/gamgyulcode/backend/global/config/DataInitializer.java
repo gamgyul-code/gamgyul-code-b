@@ -1,5 +1,7 @@
 package com.gamgyulcode.backend.global.config;
 
+import static com.gamgyulcode.backend.module.place.domain.Area.SEOQWIPO_CITY;
+
 import com.gamgyulcode.backend.module.place.domain.Place;
 import com.gamgyulcode.backend.module.place.domain.PlaceRepository;
 import com.gamgyulcode.backend.module.theme.domain.Theme;
