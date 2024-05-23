@@ -15,13 +15,13 @@ public class Reading {
     @Column(name = "reading_id")
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private ReadingCategory category;
+    private String placeName;
 
     private String phoneNumber;
 
     private String fee;
 
+    @Column(columnDefinition = "TEXT")
     private String tale;
 
     private String terrain;
@@ -32,7 +32,7 @@ public class Reading {
 
     private String originate;
 
-    private String tip;
-
     private String time;
+
+    private String introText;
 }
