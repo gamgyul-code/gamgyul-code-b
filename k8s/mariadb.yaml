@@ -1,9 +1,10 @@
+---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: mariadb
 spec:
-  replicas: 1
+  serviceName: mariadb
   selector:
     matchLabels:
       app: mariadb
@@ -14,21 +15,51 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: mariadb:latest
+          # 여러분의 mariadb image 주소를 입력해주세요.
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_ad4878d49b67
           env:
-            - name: MYSQL_ROOT_PASSWORD
-              value: sa
-          ports:
-            - containerPort: 3306
+            - name: TZ
+              value: Asia/Seoul
+            - name: MARIADB_ROOT_PASSWORD
+              value: root
+            - name: MARIADB_DATABASE
+              value: halmang
+            - name: MARIADB_DISABLE_UPGRADE_BACKUP
+              value: '1'
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: data
+              subPath: mysql
+            - mountPath: /docker-entrypoint-initdb.d
+              name: init-db
+          resources:
+            limits:
+              memory: 1Gi
+          readinessProbe:
+            tcpSocket:
+              port: 3306
+      volumes:
+        - name: init-db
+          configMap:
+            name: init-db
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mariadb-service
+  name: mariadb
 spec:
+  type: ClusterIP
+  clusterIP: None # Headless
   selector:
     app: mariadb
   ports:
-    - protocol: TCP
-      port: 3306
-      targetPort: 3306
+    - port: 3306
