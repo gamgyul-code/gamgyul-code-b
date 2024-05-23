@@ -23,7 +23,7 @@ public class Reading {
 
     private String fee;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(length = 1000)
     private String tale;
 
     private String terrain;
