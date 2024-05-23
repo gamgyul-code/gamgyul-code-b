@@ -15,7 +15,9 @@ public class Reading {
     @Column(name = "reading_id")
     private Long id;
 
-    private String placeName;
+    private String readingPlaceName;
+
+    private String placePictureUrl;
 
     private String phoneNumber;
 

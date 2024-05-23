@@ -16,6 +16,8 @@ public class ReadingResponse {
 
     private String name;
 
+    private String placePictureUrl;
+
     private String address;
 
     private String phoneNumber;
@@ -32,10 +34,16 @@ public class ReadingResponse {
 
     private String time;
 
+    private String introText;
+
+    private Long themeId;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public static ReadingResponse fromEntity(Reading reading, Place place) {
         return ReadingResponse.builder()
                 .id(reading.getId())
-                .name(reading.getPlaceName())
+                .name(reading.getReadingPlaceName())
+                .placePictureUrl(reading.getPlacePictureUrl())
                 .address(place.getPlaceAddress())
                 .phoneNumber(reading.getPhoneNumber())
                 .fee(reading.getFee())
@@ -44,6 +52,16 @@ public class ReadingResponse {
                 .caution(reading.getCaution())
                 .history(reading.getHistory())
                 .time(reading.getTime())
+                .themeId(place.getTheme().getId())
+                .build();
+    }
+
+    public static ReadingResponse fromEntity(Reading reading) {
+        return ReadingResponse.builder()
+                .id(reading.getId())
+                .name(reading.getReadingPlaceName())
+                .introText(reading.getIntroText())
+                .placePictureUrl(reading.getPlacePictureUrl())
                 .build();
     }
 }
