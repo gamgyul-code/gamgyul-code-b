@@ -92,7 +92,7 @@ public class DataInitializer {
                             + "하루의 고된 삶을 마치고 집에 돌아온 오백 아들들은 배가 고파 그 죽을 아주 맛있게 먹었다. 어머니가 빠져 죽은 죽이란 걸 까마득히 모른 채."
                             + " 막내아들이 먹을 때 쯤 죽의 밑바닥에 있는 뼈를 발견하고는 그제서야 자신들의 어머니가 그 솥에 빠져 죽은 사실을 알게 된다. 499명의 아들들은 슬피 울다 영실계곡의 돌이 되었다 하고 막내아들은 어머니의 육신을 먹은 형들과는 같이 있을 수 없다고 뛰쳐나가 현재의 차귀도에 돌이 되어 마지막 장군석으로 서 있다고 한다.")
                     .fee("무료")
-                    .introText("영실기암 한줄소개")
+                    .introText("제주를 만들었다는 설문대할망의 죽음과 관련된 이야기가 얽힌 영실기암.")
                     .build();
 
 
@@ -211,7 +211,7 @@ public class DataInitializer {
                     .entityType(EntityType.READING)
                     .fieldName("introText")
                     .languageCode(LanguageCode.EN)
-                    .text("A brief introduction to Yeongsilgi Rock")
+                    .text("Jeju creation, Seolmundae Halmang's death, Yeongsilgi Rock.")
                     .entityId(reading1.getId())
                     .build(),
 
@@ -275,7 +275,7 @@ public class DataInitializer {
                     .entityType(EntityType.READING)
                     .fieldName("introText")
                     .languageCode(LanguageCode.EN)
-                    .text("Hallasan, one of Korea's three major mountains, is the highest mountain in South Korea. What is the legend of Hallasan created by Seolmundae Halmang?")
+                    .text("Hallasan, S.Korea's highest, legend of Seolmundae.")
                     .entityId(reading2.getId())
                     .build(),
 
@@ -315,8 +315,7 @@ public class DataInitializer {
                     .entityType(EntityType.READING)
                     .fieldName("introText")
                     .languageCode(LanguageCode.EN)
-                    .text("Jeju Stone Park is themed around Seolmundae Halmang and her five hundred generals. It's an extensive park displaying all the stone statues of Jeju. This place could reveal many secrets about Seolmundae Halmang!")
-                    .entityId(reading3.getId())
+                    .text("Park themed on Seolmundae and 500 generals. Discover Seolmundae's secrets here.").entityId(reading3.getId())
                     .build(),
 
             Translation.builder()
@@ -371,7 +370,7 @@ public class DataInitializer {
                     .entityType(EntityType.READING)
                     .fieldName("introText")
                     .languageCode(LanguageCode.EN)
-                    .text("Gogeunsan, where Seolmundae Halmang is said to have laid down. You can enjoy a panoramic view of Beomseom from here.")
+                    .text("Gogeunsan, where Seolmundae lay, view of beautiful Beomseom.")
                     .entityId(reading4.getId())
                     .build(),
 
@@ -434,7 +433,7 @@ public class DataInitializer {
                     .entityType(EntityType.READING)
                     .fieldName("introText")
                     .languageCode(LanguageCode.EN)
-                    .text("A sunrise spot with a lighthouse, blending with the sea and occasional small boats. What hidden stories of Seolmundae Halmang can you discover here?")
+                    .text("Sunrise spot with lighthouse and boats, hidden tales of Seolmundae.")
                     .entityId(reading5.getId())
                     .build(),
 
@@ -554,7 +553,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.CN)
-                            .text("灵室奇岩的简要介绍")
+                            .text("济州创立, 雪妍德哈尔曼的死亡, 灵室奇岩.")
                             .entityId(reading1.getId())
                             .build(),
 
@@ -618,7 +617,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.CN)
-                            .text("汉拿山是韩国三大名山之一，是韩国最高的山。雪妍德哈尔玛创立汉拿山的传说是什么？")
+                            .text("韩国最高的汉拿山，雪妍德的传说。")
                             .entityId(reading2.getId())
                             .build(),
 
@@ -658,7 +657,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.CN)
-                            .text("济州石公园以雪妍德哈尔玛和她的五百将军为主题。它是一个展示济州所有石像的广阔公园。这个地方可以揭示很多关于雪妍德哈尔玛的秘密！")
+                            .text("以雪妍德和五百将军为主题的公园。在这里探索雪妍德的秘密。")
                             .entityId(reading3.getId())
                             .build(),
 
@@ -714,7 +713,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.CN)
-                            .text("传说雪妍德哈尔玛曾在古根山躺下。你可以在这里欣赏到虎岛的全景。")
+                            .text("雪妍德传说中的古根山，美丽的虎岛景观。")
                             .entityId(reading4.getId())
                             .build(),
 
@@ -762,7 +761,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.CN)
-                            .text("这是一个有灯塔的日出景点，与大海和偶尔出没的小船融为一体。在这里你能发现雪妍德哈尔玛的哪些隐藏故事？")
+                            .text("有灯塔和船只的日出景点，隐藏着雪妍德的故事。")
                             .entityId(reading5.getId())
                             .build(),
 
@@ -882,7 +881,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.JP)
-                            .text("ヨンシル奇岩の簡単な紹介")
+                            .text("済州創造, ソルムンダエハルマンの死, ヨンシル奇岩.")
                             .entityId(reading1.getId())
                             .build(),
 
@@ -946,7 +945,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.JP)
-                            .text("漢拏山は韓国の三大名山の一つで、韓国で最も高い山です。ソルムンダエハルマンが創った漢拏山の伝説とは？")
+                            .text("韓国最高の漢拏山、ソルムンダエの伝説。")
                             .entityId(reading2.getId())
                             .build(),
 
@@ -986,7 +985,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.JP)
-                            .text("済州石公園は、ソルムンダエハルマンと彼女の五百将軍をテーマにしています。広大な公園で、済州のすべての石像を展示しています。この場所は、ソルムンダエハルマンの多くの秘密を明らかにするかもしれません！")
+                            .text("ソルムンダエと五百将軍をテーマにした公園。ここでソルムンダエの秘密を探ってください。")
                             .entityId(reading3.getId())
                             .build(),
 
@@ -1042,7 +1041,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.JP)
-                            .text("ソルムンダエハルマンが古根山に横たわっていたと言われています。ここから虎島の全景を楽しむことができます。")
+                            .text("ソルムンダエが横たわったとされる古根山、美しい虎島の眺め。")
                             .entityId(reading4.getId())
                             .build(),
 
@@ -1090,7 +1089,7 @@ public class DataInitializer {
                             .entityType(EntityType.READING)
                             .fieldName("introText")
                             .languageCode(LanguageCode.JP)
-                            .text("灯台と調和した日の出スポットで、海と時折出没する小船と一体化しています。ここでソルムンダエハルマンの隠された物語を発見できますか？")
+                            .text("灯台とボートが見える日の出スポット、ソルムンダエの隠された物語。")
                             .entityId(reading5.getId())
                             .build(),
 
